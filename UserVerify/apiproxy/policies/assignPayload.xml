@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage name="assignPayload">
+	<AssignTo type="response" createNew="true"/>
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+	<Set>
+
+		<Payload contentType="application/json">
+			{
+				"msg": { "response" : "Hello World - Authentication success!"} 
+			}
+		</Payload>
+		    <StatusCode>200</StatusCode>
+	</Set>
+
+	<Add> 
+		<Headers> 
+			<Header name="Access-Control-Allow-Origin">*</Header> 
+		</Headers> 
+	</Add>
+
+</AssignMessage>

@@ -1,0 +1,12 @@
+      <form class="form-signin" action="<%= redirectURL %>" style="padding-top: 60px;">
+        <h4 class="form-signin-heading"><%= header%></h4>
+        <p><b>Error : </b> <%= error%></p> 
+        <p><b>Description : </b> <%= description%></p> 
+         
+         <%if (redirectURL != null && redirectURL !="" && redirectURL.split("?")[0] != null) { %>
+         <button class="btn btn-medium btn-error" type="submit">Exit</button>
+        <% } %>
+        
+    
+      </form>
+

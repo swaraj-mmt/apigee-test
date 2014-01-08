@@ -1,0 +1,22 @@
+<ExtractVariables enabled="true" continueOnError="true" async="false" name="AccessTokenRequest.ExtractResponse">
+    <DisplayName>AccessTokenRequest.ExtractResponse</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Source clearPayload="false">at.response.content</Source>
+    <JSONPayload > 
+		 <Variable name="op_firstname">  
+			<JSONPath>$.name</JSONPath>
+		</Variable>
+		 <Variable name="op_lastname">
+			<JSONPath>$.surname</JSONPath>
+		</Variable>
+		<Variable  name="op_msisdn">
+			<JSONPath>$.msisdn</JSONPath>
+		</Variable>
+    	<Variable name="access_token">
+			<JSONPath>$.access_token</JSONPath>
+		</Variable>
+    </JSONPayload>
+    </ExtractVariables>
+

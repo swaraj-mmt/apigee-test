@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="ShowUserInfoFlow2">
+    <DisplayName>ShowUserInfoFlow-2</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Copy/>
+    <Remove/>
+    <ADD>
+    <Headers>
+ <Header name="Content-Type">application/json</Header>
+   <Header name="Access-Control-Allow-Origin">*</Header>
+  </Headers>
+    </ADD>
+        
+    <Set>
+        <!-- <QueryParams>
+            <QueryParam name="msisdn">{request.queryparam.msisdn}</QueryParam>
+            <QueryParam name="fname">{request.queryparam.fname}</QueryParam>
+            <QueryParam name="lname">{request.queryparam.lname}</QueryParam>
+        </QueryParams> -->
+        <Payload contentType="application/json" variablePrefix="$" variableSuffix="%">
+        {"entities":[{"name":"Anil","surname":"Karamchandani","tel":"$msisdn%","email":"pprprpr@ajaja.com","username":"dhhh2333"}]}
+        </Payload>
+
+    </Set>
+    <AssignVariable>
+        <Name>name</Name>
+        <Value/>
+        <Ref/>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

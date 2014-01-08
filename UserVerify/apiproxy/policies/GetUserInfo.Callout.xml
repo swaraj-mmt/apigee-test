@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout enabled="true" continueOnError="true" async="false" name="GetUserInfo.Callout">
+    <DisplayName>GetUserInfo.Callout</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Request variable="gui.request" clearPayload="false">
+        <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>gui.response</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>[TO_BE_REPLACED]</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

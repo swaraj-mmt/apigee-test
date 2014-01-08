@@ -1,0 +1,60 @@
+{
+   "configurations":[
+      {
+         "name":"prod",
+
+         "policies":[
+         {
+               
+            }
+         ],
+         "proxies":[
+         {
+               
+            }
+         ],
+         "targets":[
+         ]
+
+      },
+     {
+         "name":"test",
+
+         "policies":[
+         {
+                    "name": "GetUserInfo.Callout.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ServiceCallout/HTTPTargetConnection/URL",
+                            "value": "http://swaraj-test.apigee.net/tata/openId/getdetails"
+                        }
+                    ]
+                },
+				{
+                    "name": "AccessTokenRequest.Callout.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ServiceCallout/HTTPTargetConnection/URL",
+                            "value": "http://swaraj-test.apigee.net/tata/oauth/accesstoken"
+                        }
+                    ]
+                },
+				{
+                    "name": "RedirectAuthorizeCall.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/AssignMessage/Set/Headers/Header[@name='Location']",
+                            "value": "http://swaraj-test.apigee.net/tata/oauth/authorize?msisdn={request.queryparam.msisdn}&client_id=2fSUcmsHwcbcbHDPXdqfLXdmk9zLg3qh&scope=profile&response_type=authorize_code&state={request.queryparam.msisdn}&redirect_uri=http://swaraj-test.apigee.net/user/callback/{sessionid}"
+                        }
+                    ]
+                }
+         
+         
+],
+         "proxies":[
+          ] ,
+         "targets":[
+         ]
+      }
+   ]
+}

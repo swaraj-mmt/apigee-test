@@ -1,0 +1,7 @@
+<AssignMessage name="NullifySession">
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+	<AssignVariable>
+		<Name>session.Payload</Name>
+		<Value></Value>
+	</AssignVariable>
+</AssignMessage>

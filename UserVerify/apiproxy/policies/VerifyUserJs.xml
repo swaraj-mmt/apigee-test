@@ -1,0 +1,18 @@
+<JavaCallout name="VerifyUserJs">
+<ResourceURL>java://NameVerification.zip</ResourceURL>
+<ClassName>com.gsma.badge.UserNameValidation</ClassName>
+</JavaCallout>
+
+
+
+
+
+
+
+
+<!-- <Javascript timeLimit="0" enabled="true" continueOnError="true" async="false" name="VerifyUserJs"> -->
+<!-- <DisplayName>VerifyUserJs</DisplayName> -->
+<!--     <FaultRules/> -->
+<!--     <Properties/> -->
+<!--     <ResourceURL>jsc://VerifyUserJs.js</ResourceURL> -->
+<!-- </Javascript> -->

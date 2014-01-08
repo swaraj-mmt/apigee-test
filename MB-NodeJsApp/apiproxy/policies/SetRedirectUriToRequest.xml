@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage enabled="true" continueOnError="true" async="false" name="SetRedirectUriToRequest">
+	<DisplayName>SetRedirectUriToRequest.xml</DisplayName>
+	<FaultRules />
+	<Properties />
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+	<AssignTo createNew="false" transport="http" type="request">request</AssignTo>
+	<Add>
+		<QueryParams>
+			<QueryParam name="redirect_uri">/tata/openId/redirect/{sessionid}</QueryParam>
+		</QueryParams>
+	</Add>
+</AssignMessage>

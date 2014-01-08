@@ -1,0 +1,7 @@
+<ExtractVariables name="ExtractSessionIdFromUrl">
+    <DisplayName>ExtractSessionIdFromUrl</DisplayName>
+    <URIPath>
+        <Pattern ignoreCase="true">/callback/{sessionId}</Pattern>
+    </URIPath>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

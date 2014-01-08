@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage name="authorizationFailed">
+	<AssignTo type="response" createNew="false"/>
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+ 	<Set>
+
+		<Payload contentType="application/json">
+			{
+				"Error": { "response" : "Unauthorized. Not allowed to access the requested resource"} 
+			}
+		</Payload>
+		    <StatusCode>403</StatusCode>
+	</Set>
+ 
+	<Add> 
+		<Headers>
+			<Header name="WWW-Authenticate">Basic realm="Bluvia"</Header> 
+			<Header name="Access-Control-Allow-Origin">*</Header> 
+		</Headers> 
+	</Add>
+
+</AssignMessage>

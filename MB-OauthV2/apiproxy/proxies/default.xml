@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><ProxyEndpoint name="default">
+	<Description>Default Proxy to create flows on an API</Description>
+    <FaultRules/>
+    
+    <DefaultFaultRule name="GenericFaultHandler">
+	   <Step>
+		 <Name>ReturnGenericFaultMessage</Name>
+	   </Step>
+	   <AlwaysEnforce>true</AlwaysEnforce>
+    </DefaultFaultRule>
+	<Flows>
+		<Flow name="Authorization">
+			<Description>This flow is for Authorize call. This flow redirects the user to a consent application. after developer's api key validation. Stores state information.</Description>
+			<!-- Here ADD polocy to validate request parameter -->
+            <Request>
+                <Step>
+                    <Name>ValidateRequest</Name>
+                </Step>
+                <Step>
+                    <FaultRules/>
+                    <Name>validateApiKey</Name>
+                </Step>
+                <Step>
+                    <Name>GenerateUUID</Name>
+                </Step>
+                <Step>
+                    <Name>SetVariablesInSession</Name>
+                </Step>
+                <Step>
+                    <Name>Session.SetInCache</Name>
+                </Step>
+            </Request>
+		    <Response>
+		        <!-- Authorization Successful Response -->
+                <Step>
+                    <FaultRules/>
+                    <Name>redirectToConsent</Name>
+                </Step>
+               <!--  Authorization Successful Response -->
+		    </Response>
+            <!-- Here request can be GET or POST -->
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/authorize&quot;) and ((request.verb = &quot;POST&quot;) or (request.verb = &quot;GET&quot;)) </Condition>
+		</Flow>
+
+        <Flow name="OauthCodeRedirect">
+            <Description>This flow generates authcode after user is authenticated</Description>
+            <Request>
+            </Request>
+            <Response>
+                <Step>
+                    <FaultRules/>
+                    <Name>generateAuthCode</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/redirect&quot;) and (request.verb = &quot;GET&quot;)</Condition>
+        </Flow>
+
+        <Flow name="GenerateAccessToken">
+            
+            <Description>This flow is for Access token generation</Description>
+             <!-- Here Validate Parameter for token request -->
+            <Request>
+                <Step>
+                    <FaultRules/>
+                    <Name>generateAccessToken</Name>
+                </Step>
+            </Request>
+
+            <Response>
+               <!-- Token Error Response -->
+               <Step>
+                    <FaultRules/>
+                   <Name>ExtractAccessTokenResponse</Name>
+               </Step>
+               <Step>
+                   <Name>JwtTokenSigning</Name>
+               </Step>
+               <Step>
+                    <FaultRules/>
+                    <Name>GenerateAccessToken.Response</Name>
+                </Step>
+            </Response>
+            
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/accesstoken&quot;) and (request.verb = &quot;POST&quot;)</Condition>
+        </Flow>
+
+        <Flow name="GenerateRefreshToken">
+           
+            <Description>This flow is for Access token generation</Description>
+            <Request>
+                <Step>
+                    <FaultRules/>
+                    <Name>generateRefreshToken</Name>
+                </Step>
+            </Request>
+            <Response>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/refreshtoken&quot;) and (request.verb = &quot;POST&quot;)</Condition>
+        </Flow>
+       
+       <Flow name="Default-Operation">
+            <Description>Bad requests</Description>
+            <Request>
+                <Step>
+                    <FaultRules/>
+                    <Name>handleBadRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+            </Response>
+        </Flow>
+	</Flows>
+
+	<PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Condition>(request.verb=&quot;OPTIONS&quot;)</Condition>
+                <Name>CORSPreflight</Name>
+            </Step>
+        </Request>
+    </PreFlow>
+	
+   <PostFlow name="PostFlow">
+        <Response>
+            <Step>
+                <Condition>(request.verb!=&quot;OPTIONS&quot;)</Condition>
+                <Name>CORS</Name>
+            </Step>
+        </Response>    
+    </PostFlow>  
+
+    <HTTPProxyConnection>
+    	<BasePath>/tata/oauth</BasePath>
+	 </HTTPProxyConnection>
+    <RouteRule name="default"/>
+</ProxyEndpoint>

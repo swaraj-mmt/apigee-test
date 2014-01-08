@@ -1,0 +1,6 @@
+<Javascript timeLimit="0" enabled="true" continueOnError="false" async="false" name="ValidatePinJS">
+<DisplayName>ValidatePinJS</DisplayName>
+	<FaultRules/>
+	<Properties/>
+	<ResourceURL>jsc://ValidatePin.js</ResourceURL>
+</Javascript>

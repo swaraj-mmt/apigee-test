@@ -1,0 +1,14 @@
+<AssignMessage name="GetUserInfo.Create">
+<AssignTo type="request" createNew="true">gui.request</AssignTo>
+<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+ 
+ 
+<Set>
+    <Headers>
+        <Header name="Accept">application/json</Header>
+        <Header name="Authorization">Bearer {access_token}</Header>
+    </Headers>
+</Set>
+ 
+</AssignMessage>
+   

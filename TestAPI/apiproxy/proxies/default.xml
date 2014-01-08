@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+	<Description />
+	<FaultRules>
+		<FaultRule name="InvalidApiKey">
+			<Condition>fault.name = "invalid_client"</Condition>
+			<Step>
+				<FaultRules />
+				<Name>authenticationFailed</Name>
+			</Step>
+		</FaultRule>
+		<FaultRule name="InvalidProduct">
+			<Condition>fault.name = "InvalidAPICallAsNoApiProductMatchFound"
+			</Condition>
+			<Step>
+				<FaultRules />
+				<Name>authorizationFailed</Name>
+			</Step>
+		</FaultRule>
+	</FaultRules>
+	<Flows>
+		<Flow name="json1">
+			<Request>
+			</Request>
+			<Response>
+				<Step>
+					<FaultRules />
+					<Name>ShowUserInfoFlow1</Name>
+				</Step>
+			</Response>
+			<Condition>(proxy.pathsuffix MatchesPath &quot;/flow1&quot;)</Condition>
+		</Flow>
+		<Flow name="json2">
+			<Request>
+		<Step>
+		<Name>ValidateRequestParam</Name>
+		</Step>	
+			<Step>
+			<Condition></Condition>
+				<FaultRules />
+					<Name>ValidateAPIKey</Name>
+				</Step>
+				
+			</Request>
+			<Response>
+				<Step>
+					<FaultRules />
+					<Name>ShowUserInfoFlow2</Name>
+				</Step>
+			</Response>
+			<Condition>(proxy.pathsuffix MatchesPath &quot;/flow2&quot;)</Condition>
+		</Flow>
+		<Flow name="plain1">
+			<Request>
+			</Request>
+			<Response>
+				<Step>
+					<FaultRules />
+					<Name>ShowUserInfoFlow3</Name>
+				</Step>
+			</Response>
+			<Condition>(proxy.pathsuffix MatchesPath &quot;/flow3&quot;)</Condition>
+		</Flow>
+
+	</Flows>
+
+	<HTTPProxyConnection>
+		<BasePath>/test/userinfo</BasePath>
+		<VirtualHost>default</VirtualHost>
+		<VirtualHost>secure</VirtualHost>
+	</HTTPProxyConnection>
+	<RouteRule name="default">
+	
+	</RouteRule>
+</ProxyEndpoint>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout enabled="true" continueOnError="true" async="false" name="Sms.Clx.Callout">
+    <DisplayName>Sms.Clx.Callout</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Request variable="sms.clx.request" clearPayload="false">
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>sms.clx.response</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>http://195.84.167.34:3800/sendsms</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

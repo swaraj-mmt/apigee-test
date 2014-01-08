@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage enabled="true" continueOnError="false" async="false" name="RedirectAuthorizeCall">
+    <FaultRules/>
+    <Properties/>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <AssignTo createNew="true" transport="http" type="response">response</AssignTo>
+        <Set>
+        <Headers>
+				<Header name="Location">[TO_BE_REPLACED]</Header>
+            </Headers>
+        <StatusCode>302</StatusCode>
+		</Set>
+</AssignMessage>
+

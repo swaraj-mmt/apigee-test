@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage name="challengeResponse">
+	<AssignTo type="response" createNew="true"/>
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+	<Set>
+
+		<Payload contentType="application/json">
+			{
+				"msg": { "response" : "Not Authorized. Access Denied"} 
+			}
+		</Payload>
+		    <StatusCode>401</StatusCode>
+	</Set>
+
+	<Add> 
+		<Headers> 
+			<Header name="Access-Control-Allow-Origin">*</Header> 
+		</Headers> 
+	</Add>
+
+</AssignMessage>

@@ -1,0 +1,11 @@
+<KeyValueMapOperations name="GetPinFromKVM" mapIdentifier="PinMap">
+	<ExpiryTimeInSecs>60</ExpiryTimeInSecs>
+	<Scope>organization</Scope>
+
+<Get assignTo="pin" index='1'>
+    <Key>
+      <Parameter ref="request.queryparam.userId"/> 
+    </Key>
+ </Get>
+  
+</KeyValueMapOperations>

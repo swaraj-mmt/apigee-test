@@ -1,0 +1,11 @@
+<KeyValueMapOperations name="SavePinToKVM" mapIdentifier="PinMap">
+	<ExpiryTimeInSecs>60</ExpiryTimeInSecs>
+	<Scope>organization</Scope>
+	
+<Put override="true">
+    <Key>
+        <Parameter ref="request.queryparam.userId"/>
+    </Key>
+    <Value ref="pin"/>
+</Put>
+</KeyValueMapOperations>

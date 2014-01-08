@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables enabled="true" continueOnError="false" async="false" name="ExtractUserProfileResponse">
+	<DisplayName>ExtractUserProfileResponse</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <Source>appservicesuserprofile</Source>
+
+    <JSONPayload> 
+		 <Variable name="name">  
+			<JSONPath>$.entities[0].name</JSONPath>
+		</Variable>
+		 <Variable name="username">
+			<JSONPath>$.entities[0].username</JSONPath>
+		</Variable>
+		<Variable name="email">
+			<JSONPath>$.entities[0].email</JSONPath>
+		</Variable>
+		<Variable name="msisdn">
+			<JSONPath>$.entities[0].tel</JSONPath>
+		</Variable>
+			<Variable name="surname">
+			<JSONPath>$.entities[0].surname</JSONPath>
+		</Variable>
+    </JSONPayload>
+</ExtractVariables>
+
+

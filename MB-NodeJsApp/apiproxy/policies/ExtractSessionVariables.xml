@@ -1,0 +1,11 @@
+<!-- <JavaCallout name="ExtractSessionVariables" enabled="true" continueOnError="true" async="false"> -->
+<!-- 	<ResourceURL>java://ValidateSession.jar</ResourceURL> -->
+<!-- 	<ClassName>com.apigee.consent.ExtractSessionVariables</ClassName> -->
+<!-- </JavaCallout> -->
+
+<Javascript timeLimit="0" enabled="true" continueOnError="false" async="false" name="ExtractSessionVariables">
+<DisplayName>ExtractSessionVariables</DisplayName>
+	<FaultRules/>
+	<Properties/>
+	<ResourceURL>jsc://GetSessionJson.js</ResourceURL>
+</Javascript>

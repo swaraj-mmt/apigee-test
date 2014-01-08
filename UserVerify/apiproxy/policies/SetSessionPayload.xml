@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage enabled="true" continueOnError="false" async="false" name="SetSessionPayload">
+<DisplayName>SessionPayload</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <AssignTo createNew="true" transport="http" type="request">session.request</AssignTo>
+	
+	<Set>
+
+		<Payload contentType="application/json" variablePrefix="%"
+			variableSuffix="#">{"firstName" : "%request.queryparam.firstname#","msisdn" : "%request.queryparam.msisdn#","lastname" : "%request.queryparam.lastname#","callBackUrl" : "%request.queryparam.redirect_uri#" }</Payload>
+	</Set>
+
+</AssignMessage>

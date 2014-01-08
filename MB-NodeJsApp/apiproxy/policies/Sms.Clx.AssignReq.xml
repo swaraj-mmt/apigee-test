@@ -1,0 +1,19 @@
+<AssignMessage enabled="true" continueOnError="false"
+	async="false" name="Sms.Clx.AssignReq">
+	<DisplayName>Sms.Clx.AssignReq</DisplayName>
+	<FaultRules />
+	<Properties />
+	<IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+	<AssignTo createNew="true" transport="http" type="request">sms.clx.request</AssignTo>
+	<Set>
+	     <Verb>GET</Verb>
+         <QueryParams>
+			   <QueryParam name="username">wacapps_h_gw0</QueryParam>
+            	<QueryParam name="password">sBUMqpdA</QueryParam>
+             	<QueryParam name="text">Pin : {pin}</QueryParam>
+              	<QueryParam name="from">GSMAEX</QueryParam>
+               	<QueryParam name="to">{request.queryparam.userId}</QueryParam>       
+         </QueryParams>
+     </Set>
+
+</AssignMessage>

@@ -1,0 +1,21 @@
+<AssignMessage name="AccessTokenRequest.Create">
+<AssignTo type="request" createNew="true">at.request</AssignTo>
+<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+ 
+ 
+<Set>
+    <Headers>
+        <Header name="Accept">application/json</Header>
+    </Headers>
+    <FormParams>
+        <FormParam name="grant_type">authorization_code</FormParam>
+        <FormParam name="code">{request.queryparam.code}</FormParam>
+        <FormParam name="client_id">2fSUcmsHwcbcbHDPXdqfLXdmk9zLg3qh</FormParam>
+        <FormParam name="client_secret">RhRzOw7Wy2YvxRn7</FormParam>
+        <FormParam name="redirect_uri">http://swaraj-test.apigee.net/user/callback/{sessionId}</FormParam>
+    </FormParams>
+
+</Set>
+ 
+</AssignMessage>
+   

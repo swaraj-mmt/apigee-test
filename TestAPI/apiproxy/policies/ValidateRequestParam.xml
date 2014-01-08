@@ -1,0 +1,6 @@
+<Javascript timeLimit="0" enabled="true" continueOnError="true" async="false" name="ValidateRequestParam">
+<DisplayName>ValidateRequestParam</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <ResourceURL>jsc://ValidateRequestParam.js</ResourceURL>
+</Javascript>

@@ -1,0 +1,6 @@
+<Javascript timeLimit="0" enabled="true" continueOnError="true" async="false" name="ExtractUserProfileResponsePipe">
+<DisplayName>ExtractUserProfileResponsePipe</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <ResourceURL>jsc://ExtractUserProfileResponsePipe.js</ResourceURL>
+</Javascript>

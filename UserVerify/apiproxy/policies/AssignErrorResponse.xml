@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignErrorResponse">
+    <DisplayName>AssignErrorResponse</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Set>
+        <Payload content-type="application/json">
+        
+        {
+        
+        "error_code" : "SVC1000",
+        "error_description" : "Session Expired"
+        
+        }
+        
+        </Payload>
+    </Set>
+   
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

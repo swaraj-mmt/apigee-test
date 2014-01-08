@@ -1,0 +1,20 @@
+<ExtractVariables enabled="true" continueOnError="true" async="false" name="GetUserInfo.ExtractResponse">
+    <DisplayName>GetUserInfo.ExtractResponse</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Source clearPayload="false">gui.response.content</Source>
+    <JSONPayload > 
+		 <Variable name="op_firstname">  
+			<JSONPath>$.name</JSONPath>
+		</Variable>
+		 <Variable name="op_lastname">
+			<JSONPath>$.surname</JSONPath>
+		</Variable>
+		<Variable  name="op_msisdn">
+			<JSONPath>$.msisdn</JSONPath>
+		</Variable>
+
+    </JSONPayload>
+    </ExtractVariables>
+

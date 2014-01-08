@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="ShowUserInfoFlow3">
+    <DisplayName>ShowUserInfoFlow-3</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Copy/>
+    <Remove/>
+    <ADD>
+    <Headers>
+ <Header name="Content-Type">text/plain</Header>
+   <Header name="Access-Control-Allow-Origin">*</Header>
+  </Headers>
+    </ADD>
+        
+    <Set>
+        <!-- <QueryParams>
+            <QueryParam name="msisdn">{request.queryparam.msisdn}</QueryParam>
+            <QueryParam name="fname">{request.queryparam.fname}</QueryParam>
+            <QueryParam name="lname">{request.queryparam.lname}</QueryParam>
+        </QueryParams> -->
+        <Payload contentType="text/plain" >
+ 			9223512928|Anil|Karamchandani
+        </Payload>
+
+    </Set>
+    <AssignVariable>
+        <Name>name</Name>
+        <Value/>
+        <Ref/>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

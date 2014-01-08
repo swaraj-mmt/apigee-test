@@ -1,0 +1,4 @@
+<JavaCallout name="ExtractSessionVariables" enabled="true" continueOnError="false" async="false">
+	<ResourceURL>java://ValidateSession.jar</ResourceURL>
+	<ClassName>com.apigee.consent.ExtractSessionVariables</ClassName>
+</JavaCallout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><AssignMessage name="redirectToConsent">
+	<AssignTo createNew="true" type="response">response</AssignTo>
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+	
+	<Remove>
+		<Payload/>
+	</Remove>
+	<Set>
+		 <StatusCode>302</StatusCode>
+		<Headers> 
+			<Header name="Location">http://swaraj-test.apigee.net/tata/openId/index?sessionid={sessionid}&amp;msisdn={request.queryparam.msisdn}</Header> 
+			<Header name="Access-Control-Allow-Origin">*</Header>
+		</Headers> 
+	</Set>
+</AssignMessage>

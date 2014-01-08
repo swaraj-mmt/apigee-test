@@ -1,0 +1,10 @@
+
+      <form class="form-signin" action="/tata/openId/pinSubmit?sessionid=<%= sessionid%>&userId=<%= userId%>" method="post" style="padding-top: 60px;">
+        <h5 class="form-signin-heading">Please enter 4 digit verfication pin which is sent to you mobile <%= userId %></h5>
+        <input name="pin" type="password" class="input-block-level" placeholder="pin">
+				<fieldset class="ui-grid-a">
+				<div class="ui-block-a"> <button class="btn btn-medium btn-primary" type="submit">Verify PIN</button></div>
+				<div class="ui-block-b"><button class="btn btn-medium btn-error" type="button" onclick="window.location='<%= redirectURL%>'" >Cancel</button></div>
+		    </fieldset>
+		          </form>
+    

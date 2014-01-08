@@ -1,0 +1,6 @@
+<Javascript timeLimit="0" enabled="true" continueOnError="false" async="false" name="GeneratePinJS">
+<DisplayName>GeneratePinJS</DisplayName>
+	<FaultRules/>
+	<Properties/>
+	<ResourceURL>jsc://GeneratePin.js</ResourceURL>
+</Javascript>

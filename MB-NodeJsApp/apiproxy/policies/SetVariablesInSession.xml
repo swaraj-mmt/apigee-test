@@ -1,0 +1,11 @@
+<!-- <JavaCallout name="SetVariablesInSession" enabled="true" continueOnError="false" async="false"> -->
+<!-- 	<ResourceURL>java://ValidateSession.jar</ResourceURL> -->
+<!-- 	<ClassName>com.apigee.consent.SetVariablesInSession</ClassName> -->
+<!-- </JavaCallout> -->
+
+<Javascript timeLimit="0" enabled="true" continueOnError="false" async="false" name="SetVariablesInSession">
+<DisplayName>SetVariablesInSession</DisplayName>
+	<FaultRules/>
+	<Properties/>
+	<ResourceURL>jsc://CreateSessionJson.js</ResourceURL>
+</Javascript>
