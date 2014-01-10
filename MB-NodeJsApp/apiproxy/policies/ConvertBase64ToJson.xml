@@ -1,0 +1,6 @@
+<Javascript timeLimit="0" enabled="true" continueOnError="false" async="false" name="ConvertBase64ToJson">
+<DisplayName>ConvertBase64ToJson</DisplayName>
+	<FaultRules/>
+	<Properties/>
+	<ResourceURL>jsc://ConvertBase64ToJson.js</ResourceURL>
+</Javascript>

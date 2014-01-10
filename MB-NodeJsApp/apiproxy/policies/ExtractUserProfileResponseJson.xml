@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables enabled="true" continueOnError="false" async="false" name="ExtractUserProfileResponseJson">
+	<DisplayName>ExtractUserProfileResponseJson</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <Source>decodedJson</Source>
+
+    <JSONPayload> 
+		 <Variable name="response1">  
+			<JSONPath>$.ResponseCode</JSONPath>
+		</Variable>
+		 <Variable name="name">
+			<JSONPath>$.AccountInformation.PersonalInformation.FirstName</JSONPath>
+		</Variable>
+		<Variable name="email">
+			<JSONPath>$.AccountInformation.PersonalInformation.EmailAddress</JSONPath>
+		</Variable>
+		<Variable name="msisdn">
+			<JSONPath>$.AccountInformation.MobileNumber</JSONPath>
+		</Variable>
+			<Variable name="surname">
+			<JSONPath>$.AccountInformation.PersonalInformation.LastName</JSONPath>
+		</Variable>
+    </JSONPayload>
+</ExtractVariables>
+
+
