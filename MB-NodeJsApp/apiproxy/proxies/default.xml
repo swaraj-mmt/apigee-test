@@ -173,8 +173,20 @@
             </Step>
             <Step>
                 <FaultRules/>
-                <Name>ExtractUserProfileResponsePipe</Name>
+                <Name>ConvertBase64ToJson</Name>
             </Step>
+            <Step>
+                <FaultRules/>
+                <Name>ExtractUserProfileResponseJson</Name>
+            </Step>
+           <!--  <Step>
+                <FaultRules/>
+                <Name>ExtractUserProfileResponsePipe</Name>
+            </Step> -->
+            <!--  <Step>
+                <FaultRules/>
+                <Name>ExtractUserProfileResponse</Name>
+            </Step> -->
             
             
             

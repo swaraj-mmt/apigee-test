@@ -35,7 +35,7 @@
                     "tokens": [
                         {
                             "xpath": "/ServiceCallout/HTTPTargetConnection/URL",
-                            "value": "http://swaraj-test.apigee.net/test/userinfo/flow3"
+                            "value": "http://swaraj-test.apigee.net/test/userinfo/flow2?client_id=2fSUcmsHwcbcbHDPXdqfLXdmk9zLg3qh&redirect_uri=www.google.com&msisdn={accesstoken.userid}"
                         }
                     ]
                 }
