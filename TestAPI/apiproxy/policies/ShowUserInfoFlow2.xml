@@ -5,12 +5,12 @@
     <Properties/>
     <Copy/>
     <Remove/>
-    <ADD>
+    <Add>
     <Headers>
  <Header name="Content-Type">application/json</Header>
    <Header name="Access-Control-Allow-Origin">*</Header>
   </Headers>
-    </ADD>
+    </Add>
         
     <Set>
         <!-- <QueryParams>
@@ -18,9 +18,8 @@
             <QueryParam name="fname">{request.queryparam.fname}</QueryParam>
             <QueryParam name="lname">{request.queryparam.lname}</QueryParam>
         </QueryParams> -->
-        <Payload contentType="application/json" variablePrefix="$" variableSuffix="%">
-        {"entities":[{"name":"Anil","surname":"Karamchandani","tel":"$msisdn%","email":"pprprpr@ajaja.com","username":"dhhh2333"}]}
-        </Payload>
+        <Payload contentType="text/plain"> eyJSZXNwb25zZUNvZGUiOiIwIiwiQWNjb3VudEluZm9ybWF0aW9uIjp7IkFjY291bnRJRCI6IjEiLCJNb2JpbGVOdW1iZXIiOiI5MjIzNTEyOTI4IiwiTW9iaWxlSU1TSSI6IjAiLCJBbGlhcyI6IkJVRzkzNiIsIlN0YXR1cyI6IkFDVElWRSIsIlBlcnNvbmFsSW5mb3JtYXRpb24iOnsiTGFzdE5hbWUiOiJLYXJhbWNoYW5kYW5pIiwiRmlyc3ROYW1lIjoiQW5pbCIsIk1pZGRsZU5hbWUiOiJNSURETEVOQU1FIiwiR2VuZGVyIjoiTUFMRSIsIkVtYWlsQWRkcmVzcyI6IiIsIkFsdE51bWJlciI6Ik4vQSIsIlRJTk51bWJlciI6IiIsIkRhdGVPZkJpcnRoIjoiMTk3MC0wMS0wMSIsIlZhbGlkSUQiOnsiSUROdW1iZXIiOiJJRE5VTUJFUiIsIkV4cGlyeSI6IjE5NzAtMDEtMDEiLCJEZXNjcmlwdGlvbiI6IlBBU1NQT1JUIn0sIkVtcGxveW1lbnREZXRhaWxzIjp7IkNvbXBhbnkiOiIiLCJCdWlsZGluZ05hbWUiOiIiLCJQcm9mZXNzaW9uIjoiQUdFTlQgRCBIT1RFTCJ9LCJOYXRpb25hbGl0eSI6IkFGR0hBTklTVEFOIiwiQmlydGhQbGFjZSI6ImtlbiIsIkN1cnJlbnRBZGRyZXNzIjp7IkNpdHlJRCI6ImtlbiIsIkNpdHlOYW1lIjoibnVsbCIsIlN0YXRlSUQiOiIiLCJTdGF0ZU5hbWUiOiIiLCJSZWdpb25JRCI6Ik1BUkFESSIsIlJlZ2lvbk5hbWUiOiJudWxsIiwiQ291bnRyeUlEIjoiQUxCQU5JQSIsIkNvdW50cnlOYW1lIjoibnVsbCIsIkJ1aWxkaW5nTnVtYmVyIjoiRVNpZ246QUdSRUVEIiwiU3RyZWV0TmFtZSI6ImtlbiJ9fSwiQ29ycEluZm9ybWF0aW9uIjp7ImJ1c2luZXNzbmFtZSI6IiIsInRyYWRlbGljZW5zZW51bWJlciI6IiIsIm93bmVyc2hpcGluZm8iOiIiLCJyZWdpc3RlcmVkYWRkcmVzcyI6IiIsInR5cGVvZmJ1c2luZXNzIjoiIiwiZGF0ZW9maW5jb3Jwb3JhdGlvbiI6IjIwMTMtMTEtMTgifSwiQ3VycmVudFN0b2NrIjoiMCIsIkN1cnJlbnRFVkRTdG9jayI6IjAiLCJDdXJyZW50Q29tbWlzc2lvblN0b2NrIjoiMCIsIlBhc3N3b3JkIjoibnVsbCIsIlVzZXJJRCI6IkRPTEZPIiwiTW9kaWZpZWREYXRlIjoiMjAxMy0xMC0yOCIsIlJlZ2lzdGVyZWREYXRlIjoiMjAxMy0wNS0yMCIsIkludmFsaWRQYXNzd29yZENvdW50IjoiMCIsIkZhaWxlZFRyYW5zZmVyQ291bnQiOiIwIiwiS1lDIjoiQVBQUk9WRUQiLCJSZWZlcmVuY2VBY2NvdW50IjoiMCIsIlJlZmVyZW5jZUFjY291bnRNQ09NIjoiMCIsIlJlZmVyZW5jZUFjY291bnRFVkQiOiIwIiwiRGVmYXVsdExhbmd1YWdlIjoiRiIsIkxvY2tEZXNjcmlwdGlvbiI6IiIsIkF1dGhvcml6aW5nRmlyc3ROYW1lIjoibnVsbCIsIkF1dGhvcml6aW5nTGFzdE5hbWUiOiJudWxsIiwiQXV0aG9yaXppbmdNb2JpbGVOdW1iZXIiOiJudWxsIiwiQXV0aG9yaXppbmdJRERlc2NyaXB0aW9uIjoibnVsbCIsIkF1dGhvcml6aW5nSUROdW1iZXIiOiJudWxsIiwiQWNjb3VudFR5cGUiOiJBR05UIiwiQWNjb3VudFR5cGVEZXNjcmlwdGlvbiI6IkFHRU5UIiwiTG9ja2VkIjoiZmFsc2UifSwiTWVzc2FnZSI6IlN1Y2Nlc3NmdWxseSBGZXRjaGVkIFJlY29yZCBmb3IgYWNjb3VudCJ9
+</Payload>
 
     </Set>
     <AssignVariable>
